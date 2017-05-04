@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" ng-app="portfolioPage" ng-controller="themeCtrl" md-theme="{{theme}}" md-theme-watch="true">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Angular.js Portfolio Page</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.0.0/semantic.min.css">
+  <link rel="stylesheet" href="styles/app.css">
+</head>
+
+<body ng-cloak ng-controller="appCtrl">
+      <md-content flex>
+        <!-- <ng-include src="'partials/toolbar.html'"></ng-include> -->
+        <ng-include src="'partials/header.html'"></ng-include>
+
+        <md-tabs md-dynamic-height md-border-bottom>
+          <md-tab label="pesonal background">
+            <ng-include src="'views/home.html'"></ng-include>
+          </md-tab>
+
+          <md-tab label="special skills">
+            <ng-include src="'views/skills.html'"></ng-include>
+          </md-tab>
+
+          <md-tab label="working experience">
+            <ng-include src="'views/workexp.html'"></ng-include>
+          </md-tab>
+
+          <md-tab label="other informations">
+            <ng-include src="'views/info.html'"></ng-include>
+          </md-tab>
+
+        </md-tabs>
+      </md-content>
+
+      <footer>
+        <ng-include src="'partials/footer.html'"></ng-include>
+      </footer>
+</body>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+<script src="https:////cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script src="scripts/app.js"></script>
+<script src="scripts/data.js"></script>
+</html>

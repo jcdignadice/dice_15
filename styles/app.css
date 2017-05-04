@@ -1,0 +1,273 @@
+@keyframes load {
+    0% {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* ----- GLOBAL -------- */
+
+html {
+    background: #424242;
+}
+
+body {
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+/* ----- SKILLS PROGRESS -------- */
+.progress {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+}
+
+.progress>li {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: #93A2AC;
+    font-family: Lato;
+    font-weight: 100;
+    margin: 1rem;
+}
+
+.progress>li:before {
+    content: attr(data-name);
+    position: absolute;
+    width: 100%;
+    bottom: -2rem;
+    font-weight: 400;
+}
+
+.progress>li:after {
+    content: attr(data-percent);
+    position: absolute;
+    width: 100%;
+    top: 2rem;
+    left: 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.progress svg {
+    width: 5rem;
+    height: 5rem;
+}
+
+.progress svg:nth-child(2) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(-90deg);
+}
+
+.progress svg:nth-child(2) path {
+    fill: none;
+    stroke-width: 25;
+    stroke-dasharray: 629;
+    stroke: #fff;
+    opacity: .9;
+    animation: load 10s;
+}
+
+/* ----- SKILL LIST -------- */
+#skill-search {
+    font-size: 20px;
+    height: 50px;
+    width: 500px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.65) !important;
+}
+
+
+.animate.ng-move,
+.animate.ng-enter,
+.animate.ng-leave {
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+}
+
+.animate.ng-leave.ng-leave-active,
+.animate.ng-move,
+.animate.ng-enter {
+    opacity:0;
+    max-height:0;
+}
+
+.animate.ng-leave,
+.animate.ng-move.ng-move-active,
+.animate.ng-enter.ng-enter-active {
+    opacity:1;
+    max-height:40px;
+}
+
+/**
+ * Stagger Leave (hide) animation
+ */
+.animate.ng-leave-stagger {
+    /* this will have a 100ms delay between each successive leave animation */
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+
+    /* in case the stagger doesn't work then these two values
+     must be set to 0 to avoid an accidental CSS inheritance */
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+}
+
+/**
+ * Stagger ENTER ANIMATION
+ */
+.animate.ng-enter-stagger {
+    /* this will have a 100ms delay between each successive enter animation */
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+
+    /* in case the stagger doesn't work then these two values
+     must be set to 0 to avoid an accidental CSS inheritance */
+    -webkit-transition-duration: 0s;
+    transition-duration: 0s;
+}
+
+.cover-photo{
+  height:200px;
+}
+
+.profile-pic{
+  border-radius: 1em;
+  height:400%;
+  width:300%;
+  margin-left: -10px;
+  margin-top: -110px;
+}
+
+.md-headline{
+  margin-left:11%;
+  line-height: 1;
+  font-family: "Bernard MT Condensed";
+}
+
+.subhead{
+  margin-left:11%;
+  margin-top: : 25px;
+  font-family: "Bernard MT Condensed";
+}
+
+.seal{
+  width:100px;
+  height:100px;
+  margin: auto;
+}
+
+.f-name{
+  font-family: "Cooper Black";
+}
+
+.school-name{
+  margin-left:10px;
+  margin-top:20px;
+  font-family: "Broadway";
+}
+
+.sub-school-name{
+  margin-left:10px;
+  font-family: "Century Schoolbook";
+}
+
+/*BAR GRAPH*/
+
+@barHeight: 20px;
+@borders: #717D95;
+@primary: #59BAC0;
+
+.transition (@property) {
+  -webkit-transition: @property;
+  -moz-transition: @property;
+  -o-transition: @property;
+  transition: @property
+}
+
+.transform(@degree) {
+  transform:rotate(@degree);
+  -ms-transform:rotate(@degree);
+  -webkit-transform:rotate(@degree);
+}
+
+.clearfix,
+.clearfix:before,
+.clearfix:after {
+   display: block;
+   content: " ";
+   clear: both;
+   zoom: 1;
+}
+
+/* Resets */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #EDF2F6;
+  font-family: Arial;
+  color: #444;
+}
+
+.wrap {
+  margin: 0 auto;
+  padding: 50px;
+  max-width: 1200px;
+}
+
+/* Bar Graph Class */
+
+#resumeProficiencies {
+	float: left;
+	clear: right;
+	width: 500px;
+	margin: 20px 0px 30px 30px;
+}
+
+#resumeProficienciesTop {
+	float: left;
+	clear: right;
+	width: 100%;
+	margin: -5px 0px 0px 0px;
+	text-align: left;
+	font-weight: 600;
+}
+
+#resumeProficienciesBottom {
+	float: left;
+	clear: right;
+	width: 80%;
+	margin: 2px 0px 0px 0px;
+}
+
+.progress {
+	background:#e9e5e2;
+	background-image: -webkit-linear-gradient(top, #dddddd, #e9e5e2);
+	background-image: -moz-linear-gradient(top, #dddddd, #e9e5e2);
+	background-image: -ms-linear-gradient(top, #dddddd, #e9e5e2);
+	background-image: -o-linear-gradient(top, #dddddd, #e9e5e2);
+	background-image: linear-gradient(top, #dddddd, #e9e5e2);
+	height:20px;
+	border-radius: 0px;
+	-moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+	-webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+	box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc;
+}
+
+.adobe, .html, .css, .jquery, .javascript, .bootstrap, .wordpress, .ui, .ux, .rwd, .mobile, .rapidproto {
+
+ -webkit-transition: width 4.50s ease !important;
+ -moz-transition: width 4.50s ease !important;
+   -o-transition: width 4.50s ease !important;
+      transition: width 4.50s ease !important;
+ }
